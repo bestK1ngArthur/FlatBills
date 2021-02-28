@@ -7,26 +7,74 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A53F7DAB25EC221B00F66BE6 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53F7DAA25EC221B00F66BE6 /* UserDefaults.swift */; };
+		A53F7DAE25EC229E00F66BE6 /* BillStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53F7DAD25EC229E00F66BE6 /* BillStore.swift */; };
+		A57A434925EC35EA00E5262D /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A57A434725EC35EA00E5262D /* MainInterface.storyboard */; };
+		A57A434D25EC35EA00E5262D /* Importer.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A57A434325EC35EA00E5262D /* Importer.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A57A435525EC39B900E5262D /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53F7DAA25EC221B00F66BE6 /* UserDefaults.swift */; };
+		A57A435825EC39BE00E5262D /* BillParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57E8E3725EBBCD1006B2C4C /* BillParser.swift */; };
+		A57A435B25EC39FC00E5262D /* BillStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53F7DAD25EC229E00F66BE6 /* BillStore.swift */; };
+		A57A436025EC3A4F00E5262D /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57E8E3F25EBC00D006B2C4C /* Bill.swift */; };
+		A57A436725EC3C2700E5262D /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57A434525EC35EA00E5262D /* ShareViewController.swift */; };
 		A57E8E0B25EBBB5E006B2C4C /* FlatBillsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57E8E0A25EBBB5E006B2C4C /* FlatBillsApp.swift */; };
 		A57E8E0D25EBBB5E006B2C4C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57E8E0C25EBBB5E006B2C4C /* ContentView.swift */; };
 		A57E8E0F25EBBB5E006B2C4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A57E8E0E25EBBB5E006B2C4C /* Assets.xcassets */; };
 		A57E8E1225EBBB5E006B2C4C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A57E8E1125EBBB5E006B2C4C /* Preview Assets.xcassets */; };
-		A57E8E1425EBBB5E006B2C4C /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57E8E1325EBBB5E006B2C4C /* Persistence.swift */; };
-		A57E8E1725EBBB5E006B2C4C /* FlatBills.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A57E8E1525EBBB5E006B2C4C /* FlatBills.xcdatamodeld */; };
+		A57E8E3825EBBCD1006B2C4C /* BillParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57E8E3725EBBCD1006B2C4C /* BillParser.swift */; };
+		A57E8E4025EBC00D006B2C4C /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57E8E3F25EBC00D006B2C4C /* Bill.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		A57A434B25EC35EA00E5262D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A57E8DFF25EBBB5E006B2C4C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A57A434225EC35EA00E5262D;
+			remoteInfo = Importer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A57E8E3125EBBC6D006B2C4C /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A57A434D25EC35EA00E5262D /* Importer.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		A53F7DAA25EC221B00F66BE6 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		A53F7DAD25EC229E00F66BE6 /* BillStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillStore.swift; sourceTree = "<group>"; };
+		A57A434325EC35EA00E5262D /* Importer.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Importer.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		A57A434525EC35EA00E5262D /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		A57A434825EC35EA00E5262D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		A57A434A25EC35EA00E5262D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A57A436A25EC3DB500E5262D /* FlatBills.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FlatBills.entitlements; sourceTree = "<group>"; };
+		A57A436D25EC3EA400E5262D /* Importer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Importer.entitlements; sourceTree = "<group>"; };
 		A57E8E0725EBBB5E006B2C4C /* FlatBills.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlatBills.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A57E8E0A25EBBB5E006B2C4C /* FlatBillsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatBillsApp.swift; sourceTree = "<group>"; };
 		A57E8E0C25EBBB5E006B2C4C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A57E8E0E25EBBB5E006B2C4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A57E8E1125EBBB5E006B2C4C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		A57E8E1325EBBB5E006B2C4C /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		A57E8E1625EBBB5E006B2C4C /* FlatBills.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FlatBills.xcdatamodel; sourceTree = "<group>"; };
 		A57E8E1825EBBB5E006B2C4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A57E8E3725EBBCD1006B2C4C /* BillParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillParser.swift; sourceTree = "<group>"; };
+		A57E8E3F25EBC00D006B2C4C /* Bill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bill.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A57A434025EC35EA00E5262D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A57E8E0425EBBB5E006B2C4C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -37,10 +85,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A57A434425EC35EA00E5262D /* Importer */ = {
+			isa = PBXGroup;
+			children = (
+				A57A436D25EC3EA400E5262D /* Importer.entitlements */,
+				A57A434525EC35EA00E5262D /* ShareViewController.swift */,
+				A57A434725EC35EA00E5262D /* MainInterface.storyboard */,
+				A57A434A25EC35EA00E5262D /* Info.plist */,
+			);
+			path = Importer;
+			sourceTree = "<group>";
+		};
 		A57E8DFE25EBBB5E006B2C4C = {
 			isa = PBXGroup;
 			children = (
 				A57E8E0925EBBB5E006B2C4C /* FlatBills */,
+				A57A434425EC35EA00E5262D /* Importer */,
 				A57E8E0825EBBB5E006B2C4C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				A57E8E0725EBBB5E006B2C4C /* FlatBills.app */,
+				A57A434325EC35EA00E5262D /* Importer.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,12 +117,15 @@
 		A57E8E0925EBBB5E006B2C4C /* FlatBills */ = {
 			isa = PBXGroup;
 			children = (
+				A57A436A25EC3DB500E5262D /* FlatBills.entitlements */,
 				A57E8E0A25EBBB5E006B2C4C /* FlatBillsApp.swift */,
 				A57E8E0C25EBBB5E006B2C4C /* ContentView.swift */,
-				A57E8E0E25EBBB5E006B2C4C /* Assets.xcassets */,
-				A57E8E1325EBBB5E006B2C4C /* Persistence.swift */,
+				A57E8E3F25EBC00D006B2C4C /* Bill.swift */,
+				A57E8E3725EBBCD1006B2C4C /* BillParser.swift */,
+				A53F7DAD25EC229E00F66BE6 /* BillStore.swift */,
+				A53F7DAA25EC221B00F66BE6 /* UserDefaults.swift */,
 				A57E8E1825EBBB5E006B2C4C /* Info.plist */,
-				A57E8E1525EBBB5E006B2C4C /* FlatBills.xcdatamodeld */,
+				A57E8E0E25EBBB5E006B2C4C /* Assets.xcassets */,
 				A57E8E1025EBBB5E006B2C4C /* Preview Content */,
 			);
 			path = FlatBills;
@@ -78,6 +142,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		A57A434225EC35EA00E5262D /* Importer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A57A435025EC35EA00E5262D /* Build configuration list for PBXNativeTarget "Importer" */;
+			buildPhases = (
+				A57A433F25EC35EA00E5262D /* Sources */,
+				A57A434025EC35EA00E5262D /* Frameworks */,
+				A57A434125EC35EA00E5262D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Importer;
+			productName = Importer;
+			productReference = A57A434325EC35EA00E5262D /* Importer.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		A57E8E0625EBBB5E006B2C4C /* FlatBills */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A57E8E1B25EBBB5E006B2C4C /* Build configuration list for PBXNativeTarget "FlatBills" */;
@@ -85,10 +166,12 @@
 				A57E8E0325EBBB5E006B2C4C /* Sources */,
 				A57E8E0425EBBB5E006B2C4C /* Frameworks */,
 				A57E8E0525EBBB5E006B2C4C /* Resources */,
+				A57E8E3125EBBC6D006B2C4C /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A57A434C25EC35EA00E5262D /* PBXTargetDependency */,
 			);
 			name = FlatBills;
 			productName = FlatBills;
@@ -104,6 +187,9 @@
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
+					A57A434225EC35EA00E5262D = {
+						CreatedOnToolsVersion = 12.4;
+					};
 					A57E8E0625EBBB5E006B2C4C = {
 						CreatedOnToolsVersion = 12.4;
 					};
@@ -123,11 +209,20 @@
 			projectRoot = "";
 			targets = (
 				A57E8E0625EBBB5E006B2C4C /* FlatBills */,
+				A57A434225EC35EA00E5262D /* Importer */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		A57A434125EC35EA00E5262D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A57A434925EC35EA00E5262D /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A57E8E0525EBBB5E006B2C4C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -140,20 +235,93 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A57A433F25EC35EA00E5262D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A57A436025EC3A4F00E5262D /* Bill.swift in Sources */,
+				A57A435525EC39B900E5262D /* UserDefaults.swift in Sources */,
+				A57A436725EC3C2700E5262D /* ShareViewController.swift in Sources */,
+				A57A435825EC39BE00E5262D /* BillParser.swift in Sources */,
+				A57A435B25EC39FC00E5262D /* BillStore.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A57E8E0325EBBB5E006B2C4C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A57E8E1425EBBB5E006B2C4C /* Persistence.swift in Sources */,
+				A53F7DAE25EC229E00F66BE6 /* BillStore.swift in Sources */,
 				A57E8E0D25EBBB5E006B2C4C /* ContentView.swift in Sources */,
+				A53F7DAB25EC221B00F66BE6 /* UserDefaults.swift in Sources */,
+				A57E8E3825EBBCD1006B2C4C /* BillParser.swift in Sources */,
 				A57E8E0B25EBBB5E006B2C4C /* FlatBillsApp.swift in Sources */,
-				A57E8E1725EBBB5E006B2C4C /* FlatBills.xcdatamodeld in Sources */,
+				A57E8E4025EBC00D006B2C4C /* Bill.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		A57A434C25EC35EA00E5262D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A57A434225EC35EA00E5262D /* Importer */;
+			targetProxy = A57A434B25EC35EA00E5262D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A57A434725EC35EA00E5262D /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A57A434825EC35EA00E5262D /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		A57A434E25EC35EA00E5262D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Importer/Importer.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CT884K7983;
+				INFOPLIST_FILE = Importer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ru.bestK1ng.FlatBills.Importer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A57A434F25EC35EA00E5262D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Importer/Importer.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CT884K7983;
+				INFOPLIST_FILE = Importer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ru.bestK1ng.FlatBills.Importer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		A57E8E1925EBBB5E006B2C4C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -273,8 +441,10 @@
 		A57E8E1C25EBBB5E006B2C4C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FlatBills/FlatBills.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"FlatBills/Preview Content\"";
 				DEVELOPMENT_TEAM = CT884K7983;
@@ -295,8 +465,10 @@
 		A57E8E1D25EBBB5E006B2C4C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FlatBills/FlatBills.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"FlatBills/Preview Content\"";
 				DEVELOPMENT_TEAM = CT884K7983;
@@ -317,6 +489,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A57A435025EC35EA00E5262D /* Build configuration list for PBXNativeTarget "Importer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A57A434E25EC35EA00E5262D /* Debug */,
+				A57A434F25EC35EA00E5262D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A57E8E0225EBBB5E006B2C4C /* Build configuration list for PBXProject "FlatBills" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -336,19 +517,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		A57E8E1525EBBB5E006B2C4C /* FlatBills.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				A57E8E1625EBBB5E006B2C4C /* FlatBills.xcdatamodel */,
-			);
-			currentVersion = A57E8E1625EBBB5E006B2C4C /* FlatBills.xcdatamodel */;
-			path = FlatBills.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = A57E8DFF25EBBB5E006B2C4C /* Project object */;
 }

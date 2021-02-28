@@ -9,72 +9,67 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
-    @Environment(\.managedObjectContext) private var viewContext
-
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
-        animation: .default)
-    private var items: FetchedResults<Item>
-
+    @ObservedObject var billsStore = BillStore()
+    
     var body: some View {
-        List {
-            ForEach(items) { item in
-                Text("Item at \(item.timestamp!, formatter: itemFormatter)")
+        NavigationView {
+            List {
+                ForEach(billsStore.bills) { bill in
+                    Group {
+                        BillView(bill: bill)
+                            .padding(8)
+                    }
+                    .listRowInsets(.init(top: 6, leading: 6, bottom: 6, trailing: 0))
+                }
             }
-            .onDelete(perform: deleteItems)
-        }
-        .toolbar {
-            #if os(iOS)
-            EditButton()
-            #endif
-
-            Button(action: addItem) {
-                Label("Add Item", systemImage: "plus")
-            }
-        }
-    }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            offsets.map { items[$0] }.forEach(viewContext.delete)
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
+            .listStyle(InsetGroupedListStyle())
+            .navigationTitle("Bills")
         }
     }
 }
 
-private let itemFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.dateStyle = .short
-    formatter.timeStyle = .medium
-    return formatter
-}()
-
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        ContentView()
+    }
+}
+
+struct BillView: View {
+    let bill: Bill
+    
+    var body: some View {
+        VStack(alignment: .leading, spacing: 2) {
+            Text(bill.dateString).font(.headline)
+                .padding(.bottom, 8)
+            
+            Text("Utilities").bold()
+                .padding(.bottom, 2)
+
+            ForEach(bill.utilities) { utility in
+                Text("\(utility.name): \(Int(utility.total))₽")
+                    .padding(.bottom, 2)
+            }
+                        
+            Text("Maintenance").bold()
+                .padding(.top, 6)
+                .padding(.bottom, 2)
+
+            ForEach(bill.maintenance) { maintenance in
+                Text("\(maintenance.name): \(Int(maintenance.total))₽")
+                    .padding(.bottom, 2)
+            }
+            
+            Text("Other").bold()
+                .padding(.top, 6)
+                .padding(.bottom, 2)
+
+            ForEach(bill.other) { other in
+                Text("\(other.name): \(Int(other.total))₽")
+                    .padding(.bottom, 2)
+            }
+                        
+            (Text("Total: ") + Text("\(Int(bill.total))₽").bold())
+                .padding(.top, 8)
+        }
     }
 }
