@@ -15,10 +15,17 @@ struct BillsListView: View {
             List {
                 ForEach(billsStore.bills) { bill in
                     Group {
-                        BillView(bill: bill)
-                            .padding(8)
+                        NavigationLink(destination: BillView(bill: bill)) {
+                            BillView(bill: bill)
+                        }
+                        .padding(8)
                     }
+                    .buttonStyle(PlainButtonStyle())
                     .listRowInsets(.init(top: 6, leading: 6, bottom: 6, trailing: 0))
+                }
+                .onDelete { indexSet in
+                    guard let index = indexSet.first else { return }
+                    billsStore.bills.remove(at: index)
                 }
             }
             .listStyle(InsetGroupedListStyle())
