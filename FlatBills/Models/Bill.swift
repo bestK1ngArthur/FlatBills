@@ -20,7 +20,7 @@ struct Bill: Codable {
     
     private static let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
-        formatter.dateFormat = "dd.MM.yyyy"
+        formatter.dateFormat = "MMMM yyyy"
         return formatter
     }()
 }

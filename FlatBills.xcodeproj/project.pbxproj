@@ -17,11 +17,12 @@
 		A57A436025EC3A4F00E5262D /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57E8E3F25EBC00D006B2C4C /* Bill.swift */; };
 		A57A436725EC3C2700E5262D /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57A434525EC35EA00E5262D /* ShareViewController.swift */; };
 		A57E8E0B25EBBB5E006B2C4C /* FlatBillsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57E8E0A25EBBB5E006B2C4C /* FlatBillsApp.swift */; };
-		A57E8E0D25EBBB5E006B2C4C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57E8E0C25EBBB5E006B2C4C /* ContentView.swift */; };
+		A57E8E0D25EBBB5E006B2C4C /* BillsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57E8E0C25EBBB5E006B2C4C /* BillsListView.swift */; };
 		A57E8E0F25EBBB5E006B2C4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A57E8E0E25EBBB5E006B2C4C /* Assets.xcassets */; };
 		A57E8E1225EBBB5E006B2C4C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A57E8E1125EBBB5E006B2C4C /* Preview Assets.xcassets */; };
 		A57E8E3825EBBCD1006B2C4C /* BillParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57E8E3725EBBCD1006B2C4C /* BillParser.swift */; };
 		A57E8E4025EBC00D006B2C4C /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57E8E3F25EBC00D006B2C4C /* Bill.swift */; };
+		A59A202125FBD5A40029A324 /* BillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59A202025FBD5A40029A324 /* BillView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,12 +60,13 @@
 		A57A436D25EC3EA400E5262D /* Importer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Importer.entitlements; sourceTree = "<group>"; };
 		A57E8E0725EBBB5E006B2C4C /* FlatBills.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlatBills.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A57E8E0A25EBBB5E006B2C4C /* FlatBillsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatBillsApp.swift; sourceTree = "<group>"; };
-		A57E8E0C25EBBB5E006B2C4C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A57E8E0C25EBBB5E006B2C4C /* BillsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsListView.swift; sourceTree = "<group>"; };
 		A57E8E0E25EBBB5E006B2C4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A57E8E1125EBBB5E006B2C4C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A57E8E1825EBBB5E006B2C4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A57E8E3725EBBCD1006B2C4C /* BillParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillParser.swift; sourceTree = "<group>"; };
 		A57E8E3F25EBC00D006B2C4C /* Bill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bill.swift; sourceTree = "<group>"; };
+		A59A202025FBD5A40029A324 /* BillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,16 +119,12 @@
 		A57E8E0925EBBB5E006B2C4C /* FlatBills */ = {
 			isa = PBXGroup;
 			children = (
-				A57A436A25EC3DB500E5262D /* FlatBills.entitlements */,
 				A57E8E0A25EBBB5E006B2C4C /* FlatBillsApp.swift */,
-				A57E8E0C25EBBB5E006B2C4C /* ContentView.swift */,
-				A57E8E3F25EBC00D006B2C4C /* Bill.swift */,
-				A57E8E3725EBBCD1006B2C4C /* BillParser.swift */,
-				A53F7DAD25EC229E00F66BE6 /* BillStore.swift */,
-				A53F7DAA25EC221B00F66BE6 /* UserDefaults.swift */,
-				A57E8E1825EBBB5E006B2C4C /* Info.plist */,
-				A57E8E0E25EBBB5E006B2C4C /* Assets.xcassets */,
+				A59A202425FBD5CC0029A324 /* Services */,
+				A59A202A25FBD5E00029A324 /* Models */,
+				A59A202725FBD5D80029A324 /* Views */,
 				A57E8E1025EBBB5E006B2C4C /* Preview Content */,
+				A59A202D25FBD6070029A324 /* Resources */,
 			);
 			path = FlatBills;
 			sourceTree = "<group>";
@@ -137,6 +135,43 @@
 				A57E8E1125EBBB5E006B2C4C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A59A202425FBD5CC0029A324 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A57E8E3725EBBCD1006B2C4C /* BillParser.swift */,
+				A53F7DAD25EC229E00F66BE6 /* BillStore.swift */,
+				A53F7DAA25EC221B00F66BE6 /* UserDefaults.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A59A202725FBD5D80029A324 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A57E8E0C25EBBB5E006B2C4C /* BillsListView.swift */,
+				A59A202025FBD5A40029A324 /* BillView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A59A202A25FBD5E00029A324 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A57E8E3F25EBC00D006B2C4C /* Bill.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A59A202D25FBD6070029A324 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A57A436A25EC3DB500E5262D /* FlatBills.entitlements */,
+				A57E8E1825EBBB5E006B2C4C /* Info.plist */,
+				A57E8E0E25EBBB5E006B2C4C /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,10 +287,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A53F7DAE25EC229E00F66BE6 /* BillStore.swift in Sources */,
-				A57E8E0D25EBBB5E006B2C4C /* ContentView.swift in Sources */,
+				A57E8E0D25EBBB5E006B2C4C /* BillsListView.swift in Sources */,
 				A53F7DAB25EC221B00F66BE6 /* UserDefaults.swift in Sources */,
 				A57E8E3825EBBCD1006B2C4C /* BillParser.swift in Sources */,
 				A57E8E0B25EBBB5E006B2C4C /* FlatBillsApp.swift in Sources */,
+				A59A202125FBD5A40029A324 /* BillView.swift in Sources */,
 				A57E8E4025EBC00D006B2C4C /* Bill.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -444,12 +480,12 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = FlatBills/FlatBills.entitlements;
+				CODE_SIGN_ENTITLEMENTS = FlatBills/Resources/FlatBills.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"FlatBills/Preview Content\"";
 				DEVELOPMENT_TEAM = CT884K7983;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = FlatBills/Info.plist;
+				INFOPLIST_FILE = FlatBills/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -468,12 +504,12 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = FlatBills/FlatBills.entitlements;
+				CODE_SIGN_ENTITLEMENTS = FlatBills/Resources/FlatBills.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"FlatBills/Preview Content\"";
 				DEVELOPMENT_TEAM = CT884K7983;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = FlatBills/Info.plist;
+				INFOPLIST_FILE = FlatBills/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

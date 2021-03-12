@@ -1,45 +1,18 @@
 //
-//  ContentView.swift
+//  BillView.swift
 //  FlatBills
 //
-//  Created by Artem Belkov on 28.02.2021.
+//  Created by Artem Belkov on 12.03.2021.
 //
 
 import SwiftUI
-import CoreData
-
-struct ContentView: View {
-    @ObservedObject var billsStore = BillStore()
-    
-    var body: some View {
-        NavigationView {
-            List {
-                ForEach(billsStore.bills) { bill in
-                    Group {
-                        BillView(bill: bill)
-                            .padding(8)
-                    }
-                    .listRowInsets(.init(top: 6, leading: 6, bottom: 6, trailing: 0))
-                }
-            }
-            .listStyle(InsetGroupedListStyle())
-            .navigationTitle("Bills")
-        }
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
 
 struct BillView: View {
     let bill: Bill
     
     var body: some View {
         VStack(alignment: .leading, spacing: 2) {
-            Text(bill.dateString).font(.headline)
+            Text(bill.dateString).font(.title3).bold()
                 .padding(.bottom, 8)
             
             Text("Utilities").bold()

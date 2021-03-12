@@ -11,7 +11,7 @@ import SwiftUI
 struct FlatBillsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            BillsListView()
         }
     }
 }
