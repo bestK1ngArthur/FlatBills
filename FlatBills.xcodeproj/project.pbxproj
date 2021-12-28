@@ -23,6 +23,9 @@
 		A57E8E3825EBBCD1006B2C4C /* BillParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57E8E3725EBBCD1006B2C4C /* BillParser.swift */; };
 		A57E8E4025EBC00D006B2C4C /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57E8E3F25EBC00D006B2C4C /* Bill.swift */; };
 		A59A202125FBD5A40029A324 /* BillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59A202025FBD5A40029A324 /* BillView.swift */; };
+		A5B9B333277B2B8E00732837 /* BillsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B9B332277B2B8E00732837 /* BillsListViewModel.swift */; };
+		A5B9B339277B2BF800732837 /* DependenciesContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B9B336277B2BF800732837 /* DependenciesContainer.swift */; };
+		A5B9B33A277B2BF800732837 /* Dependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B9B338277B2BF800732837 /* Dependency.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +70,9 @@
 		A57E8E3725EBBCD1006B2C4C /* BillParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillParser.swift; sourceTree = "<group>"; };
 		A57E8E3F25EBC00D006B2C4C /* Bill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bill.swift; sourceTree = "<group>"; };
 		A59A202025FBD5A40029A324 /* BillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillView.swift; sourceTree = "<group>"; };
+		A5B9B332277B2B8E00732837 /* BillsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsListViewModel.swift; sourceTree = "<group>"; };
+		A5B9B336277B2BF800732837 /* DependenciesContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DependenciesContainer.swift; sourceTree = "<group>"; };
+		A5B9B338277B2BF800732837 /* Dependency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dependency.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +126,8 @@
 			isa = PBXGroup;
 			children = (
 				A57E8E0A25EBBB5E006B2C4C /* FlatBillsApp.swift */,
+				A5B9B335277B2BF800732837 /* Dependencies */,
+				A5B9B337277B2BF800732837 /* Wrappers */,
 				A59A202425FBD5CC0029A324 /* Services */,
 				A59A202A25FBD5E00029A324 /* Models */,
 				A59A202725FBD5D80029A324 /* Views */,
@@ -150,7 +158,7 @@
 		A59A202725FBD5D80029A324 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A57E8E0C25EBBB5E006B2C4C /* BillsListView.swift */,
+				A5B9B334277B2B9400732837 /* BillsList */,
 				A59A202025FBD5A40029A324 /* BillView.swift */,
 			);
 			path = Views;
@@ -172,6 +180,31 @@
 				A57E8E0E25EBBB5E006B2C4C /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		A5B9B334277B2B9400732837 /* BillsList */ = {
+			isa = PBXGroup;
+			children = (
+				A57E8E0C25EBBB5E006B2C4C /* BillsListView.swift */,
+				A5B9B332277B2B8E00732837 /* BillsListViewModel.swift */,
+			);
+			path = BillsList;
+			sourceTree = "<group>";
+		};
+		A5B9B335277B2BF800732837 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				A5B9B336277B2BF800732837 /* DependenciesContainer.swift */,
+			);
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
+		A5B9B337277B2BF800732837 /* Wrappers */ = {
+			isa = PBXGroup;
+			children = (
+				A5B9B338277B2BF800732837 /* Dependency.swift */,
+			);
+			path = Wrappers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,9 +320,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A53F7DAE25EC229E00F66BE6 /* BillStore.swift in Sources */,
+				A5B9B333277B2B8E00732837 /* BillsListViewModel.swift in Sources */,
 				A57E8E0D25EBBB5E006B2C4C /* BillsListView.swift in Sources */,
 				A53F7DAB25EC221B00F66BE6 /* UserDefaults.swift in Sources */,
+				A5B9B339277B2BF800732837 /* DependenciesContainer.swift in Sources */,
 				A57E8E3825EBBCD1006B2C4C /* BillParser.swift in Sources */,
+				A5B9B33A277B2BF800732837 /* Dependency.swift in Sources */,
 				A57E8E0B25EBBB5E006B2C4C /* FlatBillsApp.swift in Sources */,
 				A59A202125FBD5A40029A324 /* BillView.swift in Sources */,
 				A57E8E4025EBC00D006B2C4C /* Bill.swift in Sources */,

@@ -7,7 +7,11 @@
 
 import PDFKit
 
-class BillParser {
+protocol IBillParser {
+    func parse(from url: URL) -> Bill?
+}
+
+final class BillParser: IBillParser {
     static let `default` = BillParser()
     
     func parse(from url: URL) -> Bill? {
