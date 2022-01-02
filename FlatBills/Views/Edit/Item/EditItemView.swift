@@ -14,7 +14,7 @@ struct EditItemView: View {
         VStack {
             TextField("Name", text: $item.name)
                 .font(.headline)
-            HStack {
+            HStack(spacing: 4) {
                 TextField("0", value: $item.value, format: .number)
                     .keyboardType(.decimalPad)
                     .fixedSize()

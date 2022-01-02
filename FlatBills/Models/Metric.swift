@@ -32,8 +32,8 @@ struct Metric: Codable {
 extension Metric {
     enum Unit: String, Codable, CaseIterable, Identifiable {
         case gigaCalorie = "gCal"
-        case squareMetre = "m3"
-        case cubicMetre = "m2"
+        case squareMetre = "m²"
+        case cubicMetre = "m³"
         case kiloWattHour = "kW⋅h"
         
         var id: String { rawValue }

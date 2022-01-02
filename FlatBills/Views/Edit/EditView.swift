@@ -23,12 +23,20 @@ struct EditView: View {
                     ForEach($model.utilities) { $item in
                         EditItemView(item: $item)
                     }
+                    
+                    if model.utilities.isEmpty {
+                        Text("No items")
+                    }
                 }
                 .headerProminence(.increased)
 
                 Section("Maintenance") {
                     ForEach($model.maintenance) { $item in
                         EditItemView(item: $item)
+                    }
+                    
+                    if model.maintenance.isEmpty {
+                        Text("No items")
                     }
                 }
                 .headerProminence(.increased)
@@ -37,12 +45,16 @@ struct EditView: View {
                     ForEach($model.other) { $item in
                         EditItemView(item: $item)
                     }
+                    
+                    if model.other.isEmpty {
+                        Text("No items")
+                    }
                 }
                 .headerProminence(.increased)
                 
                 Section {
                     HStack {
-                        Text("Total Price")
+                        Text("Total")
                         Spacer()
                         TextField("0", value: $model.totalPrice, formatter: .price)
                             .multilineTextAlignment(.trailing)

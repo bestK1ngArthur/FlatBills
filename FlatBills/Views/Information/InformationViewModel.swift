@@ -10,6 +10,7 @@ import Foundation
 final class InformationViewModel: ObservableObject {
     @Published var month: String
     @Published var sections: [Section]
+    @Published var totalPrice: String
     @Published var bill: Bill
     @Published var isEditPresented = false
     
@@ -37,6 +38,7 @@ final class InformationViewModel: ObservableObject {
             
             return sections
         }()
+        self.totalPrice = NumberFormatter.price.string(from: NSNumber(value: bill.totalPrice))!
         self.bill = bill
     }
     

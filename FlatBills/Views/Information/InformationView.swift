@@ -24,6 +24,16 @@ struct InformationView: View {
                 }
                 .headerProminence(.increased)
             }
+            
+            Section {
+                HStack {
+                    Text("Total")
+                    Spacer()
+                    Text(model.totalPrice)
+                        .multilineTextAlignment(.trailing)
+                        .font(.headline)
+                }
+            }
         }
         .navigationTitle(model.month)
         .navigationBarTitleDisplayMode(.inline)

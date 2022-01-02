@@ -59,17 +59,19 @@ final class ListViewModel: ObservableObject {
         let bills = billStore.getSavedBills()
         let groups = Dictionary(grouping: bills, by: { $0.date.year })
         
-        sections = groups.keys.map { year in
-            let items = groups[year]!.map { bill in
-                Item(
-                    month: DateFormatter.month.string(from: bill.date),
-                    price: NumberFormatter.price.string(from: NSNumber(value: bill.totalPrice))!,
-                    bill: bill
-                )
+        sections = groups.keys
+            .sorted()
+            .map { year in
+                let items = groups[year]!.map { bill in
+                    Item(
+                        month: DateFormatter.month.string(from: bill.date),
+                        price: NumberFormatter.price.string(from: NSNumber(value: bill.totalPrice))!,
+                        bill: bill
+                    )
+                }
+                
+                return Section(title: "\(year)", items: items)
             }
-            
-            return Section(title: "\(year)", items: items)
-        }
     }
 }
 
