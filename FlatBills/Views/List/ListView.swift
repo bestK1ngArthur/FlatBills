@@ -14,6 +14,13 @@ struct ListView: View {
     var body: some View {
         NavigationView {
             List {
+                if model.sections.isEmpty {
+                    Section {
+                        Text("No bills")
+                    }
+                    .headerProminence(.increased)
+                }
+                
                 if model.prices.count > 2 {
                     Section("Chart") {
                         Chart(data: model.prices)

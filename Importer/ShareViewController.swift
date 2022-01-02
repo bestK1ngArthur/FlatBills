@@ -32,10 +32,21 @@ final class ShareViewController: UIViewController {
                         self?.activityIndicator.stopAnimating()
                     }
                 } else {
-                    fatalError("Error to parsing bill")
+                    DispatchQueue.main.async {
+                        self?.presentErrorAlert()
+                    }
                 }
             }
         }
+    }
+    
+    private func presentErrorAlert() {
+        let alert = UIAlertController(title: "Error",
+                                      message: "Error of parsing bill",
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK",
+                                      style: .default))
+        present(alert, animated: true, completion: nil)
     }
 }
 
