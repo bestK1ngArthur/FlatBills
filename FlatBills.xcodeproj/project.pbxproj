@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,7 @@
 		A510AE232782125800D2D1E5 /* Array+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A510AE222782125800D2D1E5 /* Array+Utils.swift */; };
 		A510AE2527821E5900D2D1E5 /* EditItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A510AE2427821E5900D2D1E5 /* EditItem.swift */; };
 		A510AE2727821E6400D2D1E5 /* EditItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A510AE2627821E6400D2D1E5 /* EditItemView.swift */; };
+		A510AE2B2782512600D2D1E5 /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = A510AE2A2782512600D2D1E5 /* Charts */; };
 		A53F7DAB25EC221B00F66BE6 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53F7DAA25EC221B00F66BE6 /* UserDefaults.swift */; };
 		A53F7DAE25EC229E00F66BE6 /* BillStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53F7DAD25EC229E00F66BE6 /* BillStore.swift */; };
 		A57A434925EC35EA00E5262D /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A57A434725EC35EA00E5262D /* MainInterface.storyboard */; };
@@ -113,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A510AE2B2782512600D2D1E5 /* Charts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +337,9 @@
 				A57A434C25EC35EA00E5262D /* PBXTargetDependency */,
 			);
 			name = FlatBills;
+			packageProductDependencies = (
+				A510AE2A2782512600D2D1E5 /* Charts */,
+			);
 			productName = FlatBills;
 			productReference = A57E8E0725EBBB5E006B2C4C /* FlatBills.app */;
 			productType = "com.apple.product-type.application";
@@ -365,6 +370,9 @@
 				Base,
 			);
 			mainGroup = A57E8DFE25EBBB5E006B2C4C;
+			packageReferences = (
+				A510AE292782512600D2D1E5 /* XCRemoteSwiftPackageReference "swiftui-charts" */,
+			);
 			productRefGroup = A57E8E0825EBBB5E006B2C4C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -699,6 +707,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A510AE292782512600D2D1E5 /* XCRemoteSwiftPackageReference "swiftui-charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/spacenation/swiftui-charts.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A510AE2A2782512600D2D1E5 /* Charts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A510AE292782512600D2D1E5 /* XCRemoteSwiftPackageReference "swiftui-charts" */;
+			productName = Charts;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A57E8DFF25EBBB5E006B2C4C /* Project object */;
 }

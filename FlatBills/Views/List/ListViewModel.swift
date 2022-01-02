@@ -11,6 +11,7 @@ import SwiftUI
 
 final class ListViewModel: ObservableObject {
     @Published var sections: [Section] = []
+    @Published var prices: [Price] = []
     @Published var importedBill: Bill?
     
     @Published var isFileImporterPresented = false
@@ -72,6 +73,15 @@ final class ListViewModel: ObservableObject {
                 
                 return Section(title: "\(year)", items: items)
             }
+        
+        var prices: [Price] = []
+        sections.forEach { section in
+            section.items.forEach { item in
+                prices.append(item.bill.totalPrice)
+            }
+        }
+        let max = prices.max() ?? 1
+        self.prices = prices.map { $0 / max }
     }
 }
 

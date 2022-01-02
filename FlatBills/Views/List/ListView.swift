@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Charts
 
 struct ListView: View {
     @ObservedObject var model: ListViewModel
@@ -13,6 +14,17 @@ struct ListView: View {
     var body: some View {
         NavigationView {
             List {
+                if model.prices.count > 2 {
+                    Section("Chart") {
+                        Chart(data: model.prices)
+                            .chartStyle(
+                                AreaChartStyle(.quadCurve, fill: LinearGradient(gradient: .init(colors: [Color.orange.opacity(0.8), Color.orange.opacity(0.05)]), startPoint: .top, endPoint: .bottom))
+                            )
+                            .frame(minHeight: 100)
+                    }
+                    .headerProminence(.increased)
+                }
+
                 ForEach(model.sections) { section in
                     Section(section.title) {
                         ForEach(section.items) { item in
