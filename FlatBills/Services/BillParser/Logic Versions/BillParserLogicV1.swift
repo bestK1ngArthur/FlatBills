@@ -1,24 +1,14 @@
 //
-//  BillParser.swift
+//  BillParserLogicV1.swift
 //  FlatBills
 //
-//  Created by Artem Belkov on 28.02.2021.
+//  Created by Artem on 28.12.2021.
 //
 
-import PDFKit
+import Foundation
 
-protocol IBillParser {
-    func parse(from url: URL) -> Bill?
-}
-
-final class BillParser: IBillParser {
-    static let `default` = BillParser()
-    
-    func parse(from url: URL) -> Bill? {
-        guard let document = PDFDocument(url: url)?.string else {
-            return nil
-        }
-        
+final class BillParserLogicV1: BillParserLogic {
+    func parse(from document: String) -> Bill? {
         let rows = document.components(separatedBy: "\n")
         
         let utilitiesAnchors = ["ОТОПЛЕНИЕ Гкал", "ХОЛОДНОЕ В/С м3", "ГОРЯЧЕЕ В/С м3", "ВОДООТВЕДЕНИЕ м3", "ЭЛЕКТРОСНАБЖЕНИЕ: кВт.ч"]
@@ -29,7 +19,7 @@ final class BillParser: IBillParser {
             
             return nil
         }
-
+        
         let maintenanceAnchors = ["ЭЛЕКТРОСНАБЖЕНИЕ ОДН м2", "СОДЕРЖАНИЕ И РЕМОНТ м2"]
         let maintenanceMetrics: [Metric] = rows.compactMap { row in
             for anchor in maintenanceAnchors where row.contains(anchor) {
@@ -47,7 +37,13 @@ final class BillParser: IBillParser {
             
             return nil
         }
-
+        
+        if utilitiesMetrics.isEmpty,
+           maintenanceMetrics.isEmpty,
+           otherMetrics.isEmpty {
+            return nil
+        }
+        
         var total: Price?
         for row in rows where row.contains("Итого к оплате, руб.") {
             total = Price(row.components(separatedBy: " ").last!)
@@ -63,14 +59,15 @@ final class BillParser: IBillParser {
         }
         
         return .init(
+            id: .init(),
             date: date ?? .init(),
             utilities: utilitiesMetrics,
             maintenance: maintenanceMetrics,
             other: otherMetrics,
-            total: total ?? 0
+            totalPrice: total ?? 0
         )
     }
-    
+        
     private let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"

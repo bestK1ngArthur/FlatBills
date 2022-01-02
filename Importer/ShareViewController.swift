@@ -8,13 +8,12 @@
 import UIKit
 import Social
 
-class ShareViewController: UIViewController {
-
+final class ShareViewController: UIViewController {
     @IBOutlet private weak var containerView: UIView!
     @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
-
-    private let pdfType = "com.adobe.pdf"
-    private let billsKey = "bills"
+    
+    private let billParser: IBillParser = BillParser()
+    private let billStore: IBillStore = BillStore()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,31 +22,23 @@ class ShareViewController: UIViewController {
         activityIndicator.startAnimating()
         
         let attachments = (self.extensionContext?.inputItems.first as? NSExtensionItem)?.attachments ?? []
-        for attachment in attachments where attachment.hasItemConformingToTypeIdentifier(pdfType) {
-            attachment.loadItem(forTypeIdentifier: pdfType, options: nil) { data, error in
+        for attachment in attachments where attachment.hasItemConformingToTypeIdentifier(.pdfType) {
+            attachment.loadItem(forTypeIdentifier: .pdfType, options: nil) { [weak self] data, error in
                 if let url = data as? URL,
-                   let bill = BillParser.default.parse(from: url) {
+                   let bill = self?.billParser.parse(from: url) {
+                    self?.billStore.saveBill(bill)
                     
-                    do {
-                        var bills = (try? UserDefaults.default.getObject(forKey: self.billsKey, castTo: [Bill].self)) ?? []
-                        bills.append(bill)
-                        try UserDefaults.default.setObject(bills, forKey: self.billsKey)
-                        
-                        print("Successefully saving bill")
-                        self.extensionContext!.completeRequest(returningItems: [], completionHandler: nil)
-
-                        DispatchQueue.main.async {
-                            self.activityIndicator.stopAnimating()
-                        }
-                        
-                    } catch {
-                        fatalError("Error to saving bill")
+                    DispatchQueue.main.async {
+                        self?.activityIndicator.stopAnimating()
                     }
-                    
                 } else {
                     fatalError("Error to parsing bill")
                 }
             }
         }
     }
+}
+
+private extension String {
+    static let pdfType = "com.adobe.pdf"
 }

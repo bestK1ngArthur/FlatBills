@@ -23,7 +23,7 @@ struct FlatBillsApp: App {
     
     var body: some Scene {
         WindowGroup {
-            BillsListView(model: .init())
+            ListView(model: .init())
         }
     }
 }

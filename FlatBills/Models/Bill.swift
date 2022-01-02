@@ -8,44 +8,45 @@
 import Foundation
 
 struct Bill: Codable {
+    /// ID счёта
+    let id: UUID
+    
+    /// Дата выставления счета
     let date: Date
+    
+    /// Коммунальные платежи
     let utilities: [Metric]
+    
+    /// Содержание общих помещений
     let maintenance: [Metric]
+    
+    /// Прочие услуги
     let other: [Metric]
-    let total: Price
     
-    var dateString: String {
-        Self.dateFormatter.string(from: date)
-    }
-    
-    private static let dateFormatter: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "MMMM yyyy"
-        return formatter
-    }()
+    /// Общая стоимость
+    let totalPrice: Price
 }
 
-extension Bill: Identifiable {
-    var id: String { .init(date.timeIntervalSince1970) }
-}
-
-struct Metric: Codable {
-    let name: String
-    let unit: Unit
-    let value: Double
-    let tariff: Price
-    let total: Price
-    
-    enum Unit: String, Codable {
-        case gigaCalorie = "gCal"
-        case squareMetre = "m3"
-        case cubicMetre = "m2"
-        case kiloWattHour = "kW⋅h"
+extension Bill {
+    static var zero: Bill {
+        Bill(
+            id: .init(),
+            date: .now,
+            utilities: [
+                .init(name: "☀️ Heating", unit: .gigaCalorie, value: 0, tariff: 0, total: 0),
+                .init(name: "❄️ Cold water", unit: .cubicMetre, value: 0, tariff: 0, total: 0),
+                .init(name: "🔥 Hot water", unit: .cubicMetre, value: 0, tariff: 0, total: 0),
+                .init(name: "🚽 Drainage", unit: .cubicMetre, value: 0, tariff: 0, total: 0),
+                .init(name: "⚡️ Power", unit: .kiloWattHour, value: 0, tariff: 0, total: 0)
+            ],
+            maintenance: [
+                .init(name: "⚡️ Power", unit: .kiloWattHour, value: 0, tariff: 0, total: 0),
+                .init(name: "🛠 Repair", unit: .squareMetre, value: 0, tariff: 0, total: 0)
+            ],
+            other: [
+                .init(name: "🚔 Security", unit: .squareMetre, value: 0, tariff: 0, total: 0)
+            ],
+            totalPrice: 5000
+        )
     }
 }
-
-extension Metric: Identifiable {
-    var id: String { name }
-}
-
-typealias Price = Double

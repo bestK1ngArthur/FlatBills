@@ -7,25 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A510AE1D2781D13C00D2D1E5 /* InformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A510AE1C2781D13C00D2D1E5 /* InformationViewModel.swift */; };
+		A510AE212781E4F100D2D1E5 /* Date+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A510AE202781E4F100D2D1E5 /* Date+Utils.swift */; };
+		A510AE232782125800D2D1E5 /* Array+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A510AE222782125800D2D1E5 /* Array+Utils.swift */; };
+		A510AE2527821E5900D2D1E5 /* EditItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A510AE2427821E5900D2D1E5 /* EditItem.swift */; };
+		A510AE2727821E6400D2D1E5 /* EditItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A510AE2627821E6400D2D1E5 /* EditItemView.swift */; };
 		A53F7DAB25EC221B00F66BE6 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53F7DAA25EC221B00F66BE6 /* UserDefaults.swift */; };
 		A53F7DAE25EC229E00F66BE6 /* BillStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53F7DAD25EC229E00F66BE6 /* BillStore.swift */; };
 		A57A434925EC35EA00E5262D /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A57A434725EC35EA00E5262D /* MainInterface.storyboard */; };
 		A57A434D25EC35EA00E5262D /* Importer.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A57A434325EC35EA00E5262D /* Importer.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A57A435525EC39B900E5262D /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53F7DAA25EC221B00F66BE6 /* UserDefaults.swift */; };
-		A57A435825EC39BE00E5262D /* BillParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57E8E3725EBBCD1006B2C4C /* BillParser.swift */; };
 		A57A435B25EC39FC00E5262D /* BillStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53F7DAD25EC229E00F66BE6 /* BillStore.swift */; };
 		A57A436025EC3A4F00E5262D /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57E8E3F25EBC00D006B2C4C /* Bill.swift */; };
 		A57A436725EC3C2700E5262D /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57A434525EC35EA00E5262D /* ShareViewController.swift */; };
 		A57E8E0B25EBBB5E006B2C4C /* FlatBillsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57E8E0A25EBBB5E006B2C4C /* FlatBillsApp.swift */; };
-		A57E8E0D25EBBB5E006B2C4C /* BillsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57E8E0C25EBBB5E006B2C4C /* BillsListView.swift */; };
+		A57E8E0D25EBBB5E006B2C4C /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57E8E0C25EBBB5E006B2C4C /* ListView.swift */; };
 		A57E8E0F25EBBB5E006B2C4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A57E8E0E25EBBB5E006B2C4C /* Assets.xcassets */; };
 		A57E8E1225EBBB5E006B2C4C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A57E8E1125EBBB5E006B2C4C /* Preview Assets.xcassets */; };
 		A57E8E3825EBBCD1006B2C4C /* BillParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57E8E3725EBBCD1006B2C4C /* BillParser.swift */; };
 		A57E8E4025EBC00D006B2C4C /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57E8E3F25EBC00D006B2C4C /* Bill.swift */; };
-		A59A202125FBD5A40029A324 /* BillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59A202025FBD5A40029A324 /* BillView.swift */; };
-		A5B9B333277B2B8E00732837 /* BillsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B9B332277B2B8E00732837 /* BillsListViewModel.swift */; };
+		A59A202125FBD5A40029A324 /* InformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59A202025FBD5A40029A324 /* InformationView.swift */; };
+		A5B9B333277B2B8E00732837 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B9B332277B2B8E00732837 /* ListViewModel.swift */; };
 		A5B9B339277B2BF800732837 /* DependenciesContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B9B336277B2BF800732837 /* DependenciesContainer.swift */; };
 		A5B9B33A277B2BF800732837 /* Dependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B9B338277B2BF800732837 /* Dependency.swift */; };
+		A5B9B33E277B5C7600732837 /* BillParserLogicV1.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B9B33D277B5C7600732837 /* BillParserLogicV1.swift */; };
+		A5B9B343277B5DCD00732837 /* BillParserLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B9B342277B5DCD00732837 /* BillParserLogic.swift */; };
+		A5B9B344277B5FBE00732837 /* BillParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57E8E3725EBBCD1006B2C4C /* BillParser.swift */; };
+		A5B9B345277B609C00732837 /* BillParserLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B9B342277B5DCD00732837 /* BillParserLogic.swift */; };
+		A5B9B346277B609F00732837 /* BillParserLogicV1.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B9B33D277B5C7600732837 /* BillParserLogicV1.swift */; };
+		A5B9B348277B77BC00732837 /* BillParserLogicV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B9B347277B77BC00732837 /* BillParserLogicV2.swift */; };
+		A5B9B349277B77C300732837 /* BillParserLogicV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B9B347277B77BC00732837 /* BillParserLogicV2.swift */; };
+		A5B9B34B277B795500732837 /* Metric.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B9B34A277B795500732837 /* Metric.swift */; };
+		A5B9B34E277B7A4A00732837 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B9B34D277B7A4A00732837 /* EditView.swift */; };
+		A5B9B353277B7B1E00732837 /* EditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B9B352277B7B1E00732837 /* EditViewModel.swift */; };
+		A5B9B354277B7B4B00732837 /* Metric.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B9B34A277B795500732837 /* Metric.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +68,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A510AE1C2781D13C00D2D1E5 /* InformationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewModel.swift; sourceTree = "<group>"; };
+		A510AE202781E4F100D2D1E5 /* Date+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Utils.swift"; sourceTree = "<group>"; };
+		A510AE222782125800D2D1E5 /* Array+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Utils.swift"; sourceTree = "<group>"; };
+		A510AE2427821E5900D2D1E5 /* EditItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditItem.swift; sourceTree = "<group>"; };
+		A510AE2627821E6400D2D1E5 /* EditItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditItemView.swift; sourceTree = "<group>"; };
 		A53F7DAA25EC221B00F66BE6 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		A53F7DAD25EC229E00F66BE6 /* BillStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillStore.swift; sourceTree = "<group>"; };
 		A57A434325EC35EA00E5262D /* Importer.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Importer.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,16 +83,22 @@
 		A57A436D25EC3EA400E5262D /* Importer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Importer.entitlements; sourceTree = "<group>"; };
 		A57E8E0725EBBB5E006B2C4C /* FlatBills.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlatBills.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A57E8E0A25EBBB5E006B2C4C /* FlatBillsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatBillsApp.swift; sourceTree = "<group>"; };
-		A57E8E0C25EBBB5E006B2C4C /* BillsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsListView.swift; sourceTree = "<group>"; };
+		A57E8E0C25EBBB5E006B2C4C /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		A57E8E0E25EBBB5E006B2C4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A57E8E1125EBBB5E006B2C4C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A57E8E1825EBBB5E006B2C4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A57E8E3725EBBCD1006B2C4C /* BillParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillParser.swift; sourceTree = "<group>"; };
 		A57E8E3F25EBC00D006B2C4C /* Bill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bill.swift; sourceTree = "<group>"; };
-		A59A202025FBD5A40029A324 /* BillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillView.swift; sourceTree = "<group>"; };
-		A5B9B332277B2B8E00732837 /* BillsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsListViewModel.swift; sourceTree = "<group>"; };
+		A59A202025FBD5A40029A324 /* InformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationView.swift; sourceTree = "<group>"; };
+		A5B9B332277B2B8E00732837 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		A5B9B336277B2BF800732837 /* DependenciesContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DependenciesContainer.swift; sourceTree = "<group>"; };
 		A5B9B338277B2BF800732837 /* Dependency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dependency.swift; sourceTree = "<group>"; };
+		A5B9B33D277B5C7600732837 /* BillParserLogicV1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillParserLogicV1.swift; sourceTree = "<group>"; };
+		A5B9B342277B5DCD00732837 /* BillParserLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillParserLogic.swift; sourceTree = "<group>"; };
+		A5B9B347277B77BC00732837 /* BillParserLogicV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillParserLogicV2.swift; sourceTree = "<group>"; };
+		A5B9B34A277B795500732837 /* Metric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metric.swift; sourceTree = "<group>"; };
+		A5B9B34D277B7A4A00732837 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
+		A5B9B352277B7B1E00732837 /* EditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +119,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A510AE1E2781E4C300D2D1E5 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A510AE1F2781E4F100D2D1E5 /* Extensions */,
+				A5B9B337277B2BF800732837 /* Wrappers */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		A510AE1F2781E4F100D2D1E5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A510AE202781E4F100D2D1E5 /* Date+Utils.swift */,
+				A510AE222782125800D2D1E5 /* Array+Utils.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A510AE2827821E6800D2D1E5 /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				A510AE2427821E5900D2D1E5 /* EditItem.swift */,
+				A510AE2627821E6400D2D1E5 /* EditItemView.swift */,
+			);
+			path = Item;
+			sourceTree = "<group>";
+		};
 		A57A434425EC35EA00E5262D /* Importer */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,7 +180,7 @@
 			children = (
 				A57E8E0A25EBBB5E006B2C4C /* FlatBillsApp.swift */,
 				A5B9B335277B2BF800732837 /* Dependencies */,
-				A5B9B337277B2BF800732837 /* Wrappers */,
+				A510AE1E2781E4C300D2D1E5 /* Helpers */,
 				A59A202425FBD5CC0029A324 /* Services */,
 				A59A202A25FBD5E00029A324 /* Models */,
 				A59A202725FBD5D80029A324 /* Views */,
@@ -148,7 +201,7 @@
 		A59A202425FBD5CC0029A324 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				A57E8E3725EBBCD1006B2C4C /* BillParser.swift */,
+				A5B9B33F277B5C7B00732837 /* BillParser */,
 				A53F7DAD25EC229E00F66BE6 /* BillStore.swift */,
 				A53F7DAA25EC221B00F66BE6 /* UserDefaults.swift */,
 			);
@@ -158,8 +211,9 @@
 		A59A202725FBD5D80029A324 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A5B9B334277B2B9400732837 /* BillsList */,
-				A59A202025FBD5A40029A324 /* BillView.swift */,
+				A5B9B34C277B7A3900732837 /* Information */,
+				A5B9B334277B2B9400732837 /* List */,
+				A5B9B34F277B7A4E00732837 /* Edit */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -168,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				A57E8E3F25EBC00D006B2C4C /* Bill.swift */,
+				A5B9B34A277B795500732837 /* Metric.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -182,13 +237,13 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		A5B9B334277B2B9400732837 /* BillsList */ = {
+		A5B9B334277B2B9400732837 /* List */ = {
 			isa = PBXGroup;
 			children = (
-				A57E8E0C25EBBB5E006B2C4C /* BillsListView.swift */,
-				A5B9B332277B2B8E00732837 /* BillsListViewModel.swift */,
+				A57E8E0C25EBBB5E006B2C4C /* ListView.swift */,
+				A5B9B332277B2B8E00732837 /* ListViewModel.swift */,
 			);
-			path = BillsList;
+			path = List;
 			sourceTree = "<group>";
 		};
 		A5B9B335277B2BF800732837 /* Dependencies */ = {
@@ -205,6 +260,44 @@
 				A5B9B338277B2BF800732837 /* Dependency.swift */,
 			);
 			path = Wrappers;
+			sourceTree = "<group>";
+		};
+		A5B9B33F277B5C7B00732837 /* BillParser */ = {
+			isa = PBXGroup;
+			children = (
+				A57E8E3725EBBCD1006B2C4C /* BillParser.swift */,
+				A5B9B340277B5C8A00732837 /* Logic Versions */,
+			);
+			path = BillParser;
+			sourceTree = "<group>";
+		};
+		A5B9B340277B5C8A00732837 /* Logic Versions */ = {
+			isa = PBXGroup;
+			children = (
+				A5B9B342277B5DCD00732837 /* BillParserLogic.swift */,
+				A5B9B33D277B5C7600732837 /* BillParserLogicV1.swift */,
+				A5B9B347277B77BC00732837 /* BillParserLogicV2.swift */,
+			);
+			path = "Logic Versions";
+			sourceTree = "<group>";
+		};
+		A5B9B34C277B7A3900732837 /* Information */ = {
+			isa = PBXGroup;
+			children = (
+				A59A202025FBD5A40029A324 /* InformationView.swift */,
+				A510AE1C2781D13C00D2D1E5 /* InformationViewModel.swift */,
+			);
+			path = Information;
+			sourceTree = "<group>";
+		};
+		A5B9B34F277B7A4E00732837 /* Edit */ = {
+			isa = PBXGroup;
+			children = (
+				A5B9B34D277B7A4A00732837 /* EditView.swift */,
+				A5B9B352277B7B1E00732837 /* EditViewModel.swift */,
+				A510AE2827821E6800D2D1E5 /* Item */,
+			);
+			path = Edit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,10 +400,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5B9B349277B77C300732837 /* BillParserLogicV2.swift in Sources */,
 				A57A436025EC3A4F00E5262D /* Bill.swift in Sources */,
 				A57A435525EC39B900E5262D /* UserDefaults.swift in Sources */,
+				A5B9B346277B609F00732837 /* BillParserLogicV1.swift in Sources */,
+				A5B9B345277B609C00732837 /* BillParserLogic.swift in Sources */,
 				A57A436725EC3C2700E5262D /* ShareViewController.swift in Sources */,
-				A57A435825EC39BE00E5262D /* BillParser.swift in Sources */,
+				A5B9B354277B7B4B00732837 /* Metric.swift in Sources */,
+				A5B9B344277B5FBE00732837 /* BillParser.swift in Sources */,
 				A57A435B25EC39FC00E5262D /* BillStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -319,16 +416,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5B9B353277B7B1E00732837 /* EditViewModel.swift in Sources */,
+				A510AE212781E4F100D2D1E5 /* Date+Utils.swift in Sources */,
 				A53F7DAE25EC229E00F66BE6 /* BillStore.swift in Sources */,
-				A5B9B333277B2B8E00732837 /* BillsListViewModel.swift in Sources */,
-				A57E8E0D25EBBB5E006B2C4C /* BillsListView.swift in Sources */,
+				A510AE2527821E5900D2D1E5 /* EditItem.swift in Sources */,
+				A5B9B333277B2B8E00732837 /* ListViewModel.swift in Sources */,
+				A5B9B343277B5DCD00732837 /* BillParserLogic.swift in Sources */,
+				A57E8E0D25EBBB5E006B2C4C /* ListView.swift in Sources */,
 				A53F7DAB25EC221B00F66BE6 /* UserDefaults.swift in Sources */,
+				A510AE1D2781D13C00D2D1E5 /* InformationViewModel.swift in Sources */,
+				A5B9B34B277B795500732837 /* Metric.swift in Sources */,
+				A5B9B348277B77BC00732837 /* BillParserLogicV2.swift in Sources */,
 				A5B9B339277B2BF800732837 /* DependenciesContainer.swift in Sources */,
 				A57E8E3825EBBCD1006B2C4C /* BillParser.swift in Sources */,
 				A5B9B33A277B2BF800732837 /* Dependency.swift in Sources */,
 				A57E8E0B25EBBB5E006B2C4C /* FlatBillsApp.swift in Sources */,
-				A59A202125FBD5A40029A324 /* BillView.swift in Sources */,
+				A59A202125FBD5A40029A324 /* InformationView.swift in Sources */,
+				A5B9B34E277B7A4A00732837 /* EditView.swift in Sources */,
+				A5B9B33E277B5C7600732837 /* BillParserLogicV1.swift in Sources */,
+				A510AE232782125800D2D1E5 /* Array+Utils.swift in Sources */,
 				A57E8E4025EBC00D006B2C4C /* Bill.swift in Sources */,
+				A510AE2727821E6400D2D1E5 /* EditItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,6 +469,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CT884K7983;
 				INFOPLIST_FILE = Importer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -381,6 +490,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CT884K7983;
 				INFOPLIST_FILE = Importer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -522,7 +632,7 @@
 				DEVELOPMENT_TEAM = CT884K7983;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = FlatBills/Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -546,7 +656,7 @@
 				DEVELOPMENT_TEAM = CT884K7983;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = FlatBills/Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
