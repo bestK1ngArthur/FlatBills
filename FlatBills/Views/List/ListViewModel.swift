@@ -62,6 +62,7 @@ final class ListViewModel: ObservableObject {
         
         sections = groups.keys
             .sorted()
+            .reversed()
             .map { year in
                 let items = groups[year]!.map { bill in
                     Item(
@@ -75,11 +76,15 @@ final class ListViewModel: ObservableObject {
             }
         
         var prices: [Price] = []
-        sections.forEach { section in
-            section.items.forEach { item in
-                prices.append(item.bill.totalPrice)
+        sections
+            .reversed()
+            .forEach { section in
+                section.items
+                    .reversed()
+                    .forEach { item in
+                        prices.append(item.bill.totalPrice)
+                    }
             }
-        }
         let max = prices.max() ?? 1
         self.prices = prices.map { $0 / max }
     }

@@ -54,7 +54,7 @@ struct ListView: View {
                 }
             }
             .listStyle(InsetGroupedListStyle())
-            .navigationTitle("Bills")
+            .navigationTitle("Flat Bills")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
