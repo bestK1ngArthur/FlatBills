@@ -10,6 +10,8 @@ import Combine
 
 protocol IBillStore {
     func getSavedBills() -> [Bill]
+    func getSavedBill(by id: UUID) -> Bill?
+    
     func saveBill(_ bill: Bill)
     func replaceBill(_ bill: Bill, by id: UUID)
     func removeBill(by id: UUID)
@@ -21,6 +23,11 @@ final class BillStore: IBillStore {
         return savedBills.sorted { first, second in
             first.date > second.date
         }
+    }
+    
+    func getSavedBill(by id: UUID) -> Bill? {
+        let bills = getSavedBills()
+        return bills.first { $0.id == id }
     }
     
     func saveBill(_ bill: Bill) {

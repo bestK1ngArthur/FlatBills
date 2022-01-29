@@ -47,7 +47,9 @@ struct InformationView: View {
             }
         }
         .sheet(isPresented: $model.isEditPresented) {
-            EditView(model: .init(model.bill, isPresented: $model.isEditPresented))
+            if let bill = model.bill {
+                EditView(model: .init(bill, isPresented: $model.isEditPresented))
+            }
         }
     }
 }

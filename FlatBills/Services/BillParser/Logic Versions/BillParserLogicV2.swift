@@ -9,6 +9,7 @@ import Foundation
 
 final class BillParserLogicV2: BillParserLogic {
     func parse(from document: String) -> Bill? {
+        // TODO: To be continued
         return nil
     }
 }

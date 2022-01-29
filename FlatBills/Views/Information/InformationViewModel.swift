@@ -6,17 +6,46 @@
 //
 
 import Foundation
+import Combine
 
 final class InformationViewModel: ObservableObject {
-    @Published var month: String
-    @Published var sections: [Section]
-    @Published var totalPrice: String
-    @Published var bill: Bill
+    @Published var bill: Bill? = nil
+    @Published var month: String = ""
+    @Published var sections: [Section] = []
+    @Published var totalPrice: String = ""
     @Published var isEditPresented = false
     
-    init(_ bill: Bill) {
-        self.month = DateFormatter.date.string(from: bill.date)
-        self.sections = {
+    @Dependency var billStore: IBillStore
+    
+    init(_ billID: UUID) {
+        self.billID = billID
+        
+        bind()
+        updateState()
+    }
+    
+    func presentEdit() {
+        isEditPresented = true
+    }
+        
+    private let billID: UUID
+    private var cancellables = Set<AnyCancellable>()
+
+    private func bind() {
+        $isEditPresented
+            .filter { $0 == false }
+            .sink { [weak self] _ in self?.updateState() }
+            .store(in: &cancellables)
+    }
+    
+    private func updateState() {
+        guard let bill = billStore.getSavedBill(by: billID) else {
+            fatalError("Bill is nil")
+        }
+        
+        self.bill = bill
+        month = DateFormatter.date.string(from: bill.date)
+        sections = {
             let mapItem: (Metric) -> Item = { metric in
                     .init(name: metric.name,
                           price: NumberFormatter.price.string(from: NSNumber(value: metric.total))!)
@@ -38,12 +67,7 @@ final class InformationViewModel: ObservableObject {
             
             return sections
         }()
-        self.totalPrice = NumberFormatter.price.string(from: NSNumber(value: bill.totalPrice))!
-        self.bill = bill
-    }
-    
-    func presentEdit() {
-        isEditPresented = true
+        totalPrice = NumberFormatter.price.string(from: NSNumber(value: bill.totalPrice))!
     }
 }
 

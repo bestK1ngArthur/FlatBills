@@ -36,7 +36,7 @@ struct ListView: View {
                     Section(section.title) {
                         ForEach(section.items) { item in
                             NavigationLink {
-                                InformationView(model: .init(item.bill))
+                                InformationView(model: .init(item.bill.id))
                             } label: {
                                 HStack {
                                     Text(item.month)

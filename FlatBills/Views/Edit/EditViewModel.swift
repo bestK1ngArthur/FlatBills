@@ -54,7 +54,7 @@ final class EditViewModel: ObservableObject {
         }
         
         let bill = Bill(
-            id: .init(),
+            id: billID,
             date: date,
             utilities: utilities.map(mapEditItem),
             maintenance: maintenance.map(mapEditItem),
