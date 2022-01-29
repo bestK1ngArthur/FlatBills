@@ -73,6 +73,9 @@ struct ListView: View {
                     EditView(model: .init(bill, isPresented: $model.isEditPresented))
                 }
             }
+            .onAppear {
+                model.updateSections()
+            }
         }
     }
 }

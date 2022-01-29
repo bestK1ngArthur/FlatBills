@@ -25,38 +25,7 @@ final class ListViewModel: ObservableObject {
         updateSections()
     }
     
-    func removeBill(in section: Section, indexSet: IndexSet) {
-        guard let index = indexSet.first else { return }
-        
-        let billID = section.items[index].bill.id
-        billStore.removeBill(by: billID)
-
-        updateSections()
-    }
-    
-    func add() {
-        isFileImporterPresented = true
-    }
-    
-    func handleImportResult(_ result: Result<URL, Error>) {
-        guard case let .success(url) = result else { return }
-        
-        let bill = billParser.parse(from: url) ?? .zero
-        importedBill = bill
-        isEditPresented = true
-        
-        updateSections()
-    }
-    
-    private var cancellables = Set<AnyCancellable>()
-    
-    private func bind() {
-        $isEditPresented
-            .sink { [weak self] _ in self?.updateSections() }
-            .store(in: &cancellables)
-    }
-    
-    private func updateSections() {
+    func updateSections() {
         let bills = billStore.getSavedBills()
         let groups = Dictionary(grouping: bills, by: { $0.date.year })
         
@@ -87,6 +56,37 @@ final class ListViewModel: ObservableObject {
             }
         let max = prices.max() ?? 1
         self.prices = prices.map { $0 / max }
+    }
+    
+    func removeBill(in section: Section, indexSet: IndexSet) {
+        guard let index = indexSet.first else { return }
+        
+        let billID = section.items[index].bill.id
+        billStore.removeBill(by: billID)
+
+        updateSections()
+    }
+    
+    func add() {
+        isFileImporterPresented = true
+    }
+    
+    func handleImportResult(_ result: Result<URL, Error>) {
+        guard case let .success(url) = result else { return }
+        
+        let bill = billParser.parse(from: url) ?? .zero
+        importedBill = bill
+        isEditPresented = true
+        
+        updateSections()
+    }
+    
+    private var cancellables = Set<AnyCancellable>()
+    
+    private func bind() {
+        $isEditPresented
+            .sink { [weak self] _ in self?.updateSections() }
+            .store(in: &cancellables)
     }
 }
 
